@@ -1,0 +1,35 @@
+server:
+  port: 8008
+  
+mybatis: 
+  mapper-locations: classpath*:mappers/*Mapper.xml
+  type-aliases-package: com.etoc.model
+    
+spring:
+   application:
+    name: spring-hystrix
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+      
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+     defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9003/eureka
+  instance:
+    instance-id: spring-hystrix   #自定义服务名称信息
+    prefer-ip-address: true     #访问路径可以显示IP地址
+      
+info:
+  app.name: sspring-hystrix
+  company.name: www.longerr.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

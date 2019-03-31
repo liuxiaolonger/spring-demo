@@ -1,0 +1,29 @@
+server: 
+  port: 9527
+ 
+spring: 
+  application:
+    name: spring-zuul
+ 
+eureka: 
+  client: 
+    service-url: 
+        defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9003/eureka
+  instance:
+    prefer-ip-address: true 
+ 
+ 
+zuul: 
+  #ignored-services: microservicecloud-dept
+  prefix: /etoc      #加前缀
+  ignored-services: "*"        #过滤所有的服务，对所有的服务起效
+  routes: 
+    mydept.serviceId: spring-api
+    mydept.path: /etoc/**
+ 
+info:
+  app.name: spring-zuul
+  company.name: www.longer.com
+  build.artifactId: spring-zuul
+  build.version: 0.0.1-SNAPSHOT
+
