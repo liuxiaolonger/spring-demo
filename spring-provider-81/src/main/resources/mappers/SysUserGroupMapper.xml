@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etoc.mapper.SysUserGroupMapper">
+
+	<resultMap id="BaseResultMap" type="com.etoc.model.SysUserGroup">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="group_name" jdbcType="VARCHAR" property="groupName" />
+		<result column="description" jdbcType="VARCHAR" property="description" />
+		<result column="available" jdbcType="VARCHAR" property="available" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, group_name, description, available
+	</sql>
+
+
+	<insert id="insertGroup" parameterType="com.etoc.model.SysUserGroup">
+		insert into sys_usergroup (id, group_name, description, available)
+		values (#{id}, #{groupName}, #{description},#{available})
+	</insert>
+
+
+
+	<!--分页查询动态url权限管理 -->
+	<select id="serlectUserGroup" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_usergroup sys
+		<where>
+			<if test="groupName != null and groupName.trim() != '' ">
+				AND sys.`group_name` like concat('%',#{groupName},'%')
+			</if>
+		</where>
+	</select>
+
+	
+	<select id="serlectAllUserGroup" parameterType="java.util.Map"  resultMap="BaseResultMap">
+		select a.* from sys_usergroup a
+		<if test="userId != null">
+			,sys_usergroup_user b
+		</if>
+		<where>
+			<if test="status != null">
+				a.available = #{status}
+			</if>
+			<if test="userId != null">
+				AND a.id = b.group_id and b.user_id = #{userId}
+			</if>
+		</where>
+	</select>
+	
+
+	<select id="serlectByGroupId" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_usergroup sys
+		where sys.`id` = #{id}
+	</select>
+
+
+	<update id="updateGroup" parameterType="com.etoc.model.SysUserGroup">
+		update sys_usergroup sys
+		<set>
+			<if test="groupName != null">
+				sys.`group_name` = #{groupName},
+			</if>
+			<if test="description != null">
+				sys.`description` = #{description},
+			</if>
+			<if test="available != null">
+				sys.`available` = #{available},
+			</if>
+		</set>
+		where sys.`id` = #{id}
+	</update>
+
+
+	<delete id="deleteGroup" parameterType="java.lang.String">
+		delete from sys_usergroup
+		where id = #{groupId}
+	</delete>
+
+
+</mapper>

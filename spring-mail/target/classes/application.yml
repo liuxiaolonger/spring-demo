@@ -1,0 +1,12 @@
+spring:
+ mail:
+    host:  smtp.qq.com
+    password:  upgerbketwpsbbhe
+    username: 896846152@qq.com
+    test-connection: true
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      smtp.socketFactory.fallback : true
+      smtp.starttls.enable: true
+

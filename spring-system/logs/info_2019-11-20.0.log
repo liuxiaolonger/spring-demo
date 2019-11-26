@@ -1,0 +1,1358 @@
+2019-11-20 20:25:53.150 [INFO ] 13768 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@94d7a71: startup date [Wed Nov 20 20:25:53 CST 2019]; root of context hierarchy
+2019-11-20 20:25:53.288 [INFO ] 13768 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:25:53.315 [INFO ] 13768 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e4ced0ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:25:54.214 [INFO ] 13768 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 20:25:55.280 [INFO ] 13768 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 20:25:55.280 [WARN ] 13768 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 20:25:55.282 [INFO ] 13768 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 20:25:55.290 [INFO ] 13768 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35154829: startup date [Wed Nov 20 20:25:55 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@94d7a71
+2019-11-20 20:25:55.396 [WARN ] 13768 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.longer.SystemApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+2019-11-20 20:25:55.406 [ERROR] 13768 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.longer.SystemApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:271)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:91)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
+	... 18 common frames omitted
+2019-11-20 20:26:15.655 [INFO ] 13772 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@430863a4: startup date [Wed Nov 20 20:26:15 CST 2019]; root of context hierarchy
+2019-11-20 20:26:15.787 [INFO ] 13772 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:26:15.812 [INFO ] 13772 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$78db3a9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:26:16.641 [INFO ] 13772 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 20:26:17.706 [INFO ] 13772 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 20:26:17.706 [WARN ] 13772 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 20:26:17.708 [INFO ] 13772 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 20:26:17.717 [INFO ] 13772 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1977777d: startup date [Wed Nov 20 20:26:17 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@430863a4
+2019-11-20 20:26:17.828 [WARN ] 13772 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.longer.SystemApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+2019-11-20 20:26:17.838 [ERROR] 13772 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.longer.SystemApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:184)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:271)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:91)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:694)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'MyBatisConfig' for bean class [com.longer.config.MyBatisConfig] conflicts with existing, non-compatible bean definition of same name and class [com.longer.config.database.druid.MyBatisConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:348)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:286)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:202)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:170)
+	... 18 common frames omitted
+2019-11-20 20:26:58.792 [INFO ] 12084 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6753b514: startup date [Wed Nov 20 20:26:58 CST 2019]; root of context hierarchy
+2019-11-20 20:26:58.934 [INFO ] 12084 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:26:58.960 [INFO ] 12084 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$324910bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:26:59.813 [INFO ] 12084 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 20:27:00.876 [INFO ] 12084 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 20:27:00.876 [WARN ] 12084 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 20:27:00.878 [INFO ] 12084 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 20:27:00.886 [INFO ] 12084 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7adf6d3b: startup date [Wed Nov 20 20:27:00 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6753b514
+2019-11-20 20:27:02.173 [INFO ] 12084 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 20:27:02.610 [INFO ] 12084 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=be0cfa42-5e35-31bb-ba8a-c38f10b7cee2
+2019-11-20 20:27:02.620 [INFO ] 12084 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:27:02.711 [INFO ] 12084 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$162f0dc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:27:02.857 [INFO ] 12084 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$95af5af4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:27:02.864 [INFO ] 12084 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$324910bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:27:03.339 [INFO ] 12084 [       restartedMain] o.s.b.w.e.tomcat.TomcatWebServer    :  91 - Tomcat initialized with port(s): 8085 (http)
+2019-11-20 20:27:03.461 [INFO ] 12084 [ocalhost-startStop-1] o.s.web.context.ContextLoader       : 285 - Root WebApplicationContext: initialization completed in 2575 ms
+2019-11-20 20:27:03.649 [WARN ] 12084 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 121 - No URLs will be polled as dynamic configuration sources.
+2019-11-20 20:27:03.650 [INFO ] 12084 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-11-20 20:27:03.657 [INFO ] 12084 [ocalhost-startStop-1] c.n.config.DynamicPropertyFactory   : 281 - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@e3bd367
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-11-20 20:27:06.021 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-11-20 20:27:06.022 [INFO ] 12084 [ocalhost-startStop-1] o.s.b.w.s.ServletRegistrationBean   : 187 - Servlet dispatcherServlet mapped to [/]
+2019-11-20 20:27:06.055 [WARN ] 12084 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysLogAspect': Unsatisfied dependency expressed through field 'systemLogMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemLogMapper' defined in file [E:\Workspace\.metadata\spring-mannager\spring-system\target\classes\com\longer\dao\mapper\SystemLogMapper.class]: Cannot resolve reference to bean 'SqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'SqlSessionTemplate' available
+2019-11-20 20:27:06.067 [INFO ] 12084 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:27:06.067 [INFO ] 12084 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:27:06.119 [INFO ] 12084 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 20:27:06.219 [ERROR] 12084 [       restartedMain] s.b.d.LoggingFailureAnalysisReporter:  42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field systemLogMapper in com.longer.aspect.SysLogAspect required a bean named 'SqlSessionTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'SqlSessionTemplate' in your configuration.
+
+2019-11-20 20:36:32.040 [INFO ] 14444 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@268db3d1: startup date [Wed Nov 20 20:36:32 CST 2019]; root of context hierarchy
+2019-11-20 20:36:32.176 [INFO ] 14444 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:36:32.200 [INFO ] 14444 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b7b7ef6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:36:33.069 [INFO ] 14444 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 20:36:34.132 [INFO ] 14444 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 20:36:34.132 [WARN ] 14444 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 20:36:34.134 [INFO ] 14444 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 20:36:34.143 [INFO ] 14444 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15fd5256: startup date [Wed Nov 20 20:36:34 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@268db3d1
+2019-11-20 20:36:35.377 [INFO ] 14444 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 20:36:35.787 [INFO ] 14444 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=be0cfa42-5e35-31bb-ba8a-c38f10b7cee2
+2019-11-20 20:36:35.799 [INFO ] 14444 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:36:35.904 [INFO ] 14444 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b9dec72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:36:36.087 [INFO ] 14444 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$1b1e39a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:36:36.094 [INFO ] 14444 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b7b7ef6f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:36:36.553 [INFO ] 14444 [       restartedMain] o.s.b.w.e.tomcat.TomcatWebServer    :  91 - Tomcat initialized with port(s): 8085 (http)
+2019-11-20 20:36:36.671 [INFO ] 14444 [ocalhost-startStop-1] o.s.web.context.ContextLoader       : 285 - Root WebApplicationContext: initialization completed in 2528 ms
+2019-11-20 20:36:36.835 [WARN ] 14444 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 121 - No URLs will be polled as dynamic configuration sources.
+2019-11-20 20:36:36.835 [INFO ] 14444 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-11-20 20:36:36.842 [INFO ] 14444 [ocalhost-startStop-1] c.n.config.DynamicPropertyFactory   : 281 - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@54753191
+2019-11-20 20:36:39.195 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-11-20 20:36:39.195 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-11-20 20:36:39.195 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-11-20 20:36:39.195 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-11-20 20:36:39.195 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-11-20 20:36:39.196 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-11-20 20:36:39.196 [INFO ] 14444 [ocalhost-startStop-1] o.s.b.w.s.ServletRegistrationBean   : 187 - Servlet dispatcherServlet mapped to [/]
+2019-11-20 20:36:39.231 [WARN ] 14444 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysLogAspect': Unsatisfied dependency expressed through field 'systemLogMapper'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'systemLogMapper' defined in file [E:\Workspace\.metadata\spring-mannager\spring-system\target\classes\com\longer\dao\mapper\SystemLogMapper.class]: Cannot resolve reference to bean 'SqlSessionTemplate' while setting bean property 'sqlSessionTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'SqlSessionTemplate' available
+2019-11-20 20:36:39.242 [INFO ] 14444 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:36:39.242 [INFO ] 14444 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:36:39.264 [INFO ] 14444 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 20:36:39.367 [ERROR] 14444 [       restartedMain] s.b.d.LoggingFailureAnalysisReporter:  42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field systemLogMapper in com.longer.aspect.SysLogAspect required a bean named 'SqlSessionTemplate' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'SqlSessionTemplate' in your configuration.
+
+2019-11-20 20:39:09.578 [INFO ] 15176 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3355036: startup date [Wed Nov 20 20:39:09 CST 2019]; root of context hierarchy
+2019-11-20 20:39:09.710 [INFO ] 15176 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:39:09.735 [INFO ] 15176 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c67f4387] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:39:10.577 [INFO ] 15176 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 20:39:11.639 [INFO ] 15176 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 20:39:11.639 [WARN ] 15176 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 20:39:11.641 [INFO ] 15176 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 20:39:11.649 [INFO ] 15176 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4a52f7c1: startup date [Wed Nov 20 20:39:11 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3355036
+2019-11-20 20:39:12.880 [INFO ] 15176 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 20:39:13.270 [INFO ] 15176 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=0c9666b2-4584-32f6-8d13-524fcb348f17
+2019-11-20 20:39:13.281 [INFO ] 15176 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 20:39:13.386 [INFO ] 15176 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa65408a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:39:13.553 [INFO ] 15176 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$29e58dbc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:39:13.560 [INFO ] 15176 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c67f4387] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 20:39:14.016 [INFO ] 15176 [       restartedMain] o.s.b.w.e.tomcat.TomcatWebServer    :  91 - Tomcat initialized with port(s): 8085 (http)
+2019-11-20 20:39:14.134 [INFO ] 15176 [ocalhost-startStop-1] o.s.web.context.ContextLoader       : 285 - Root WebApplicationContext: initialization completed in 2485 ms
+2019-11-20 20:39:14.294 [WARN ] 15176 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 121 - No URLs will be polled as dynamic configuration sources.
+2019-11-20 20:39:14.295 [INFO ] 15176 [ocalhost-startStop-1] c.n.c.sources.URLConfigurationSource: 122 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-11-20 20:39:14.302 [INFO ] 15176 [ocalhost-startStop-1] c.n.config.DynamicPropertyFactory   : 281 - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@72431796
+2019-11-20 20:39:16.725 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-11-20 20:39:16.725 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2019-11-20 20:39:16.725 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-11-20 20:39:16.725 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-11-20 20:39:16.725 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-11-20 20:39:16.726 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.FilterRegistrationBean    : 245 - Mapping filter: 'httpTraceFilter' to: [/*]
+2019-11-20 20:39:16.726 [INFO ] 15176 [ocalhost-startStop-1] o.s.b.w.s.ServletRegistrationBean   : 187 - Servlet dispatcherServlet mapped to [/]
+2019-11-20 20:39:16.755 [WARN ] 15176 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysLogAspect': Unsatisfied dependency expressed through field 'systemLogMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.longer.dao.mapper.SystemLogMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-11-20 20:39:16.766 [INFO ] 15176 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:39:16.766 [INFO ] 15176 [       restartedMain] c.alibaba.druid.pool.DruidDataSource:1965 - {dataSource-0} closing ...
+2019-11-20 20:39:16.786 [INFO ] 15176 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 20:39:16.971 [ERROR] 15176 [       restartedMain] s.b.d.LoggingFailureAnalysisReporter:  42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field systemLogMapper in com.longer.aspect.SysLogAspect required a bean of type 'com.longer.dao.mapper.SystemLogMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.longer.dao.mapper.SystemLogMapper' in your configuration.
+
+2019-11-20 21:09:34.954 [INFO ] 14776 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@50eb27aa: startup date [Wed Nov 20 21:09:34 CST 2019]; root of context hierarchy
+2019-11-20 21:09:35.088 [INFO ] 14776 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:09:35.113 [INFO ] 14776 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$45af9a59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:09:35.957 [INFO ] 14776 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:09:37.019 [INFO ] 14776 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:09:37.019 [WARN ] 14776 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:09:37.020 [INFO ] 14776 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:09:37.029 [INFO ] 14776 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3dd21ffc: startup date [Wed Nov 20 21:09:37 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@50eb27aa
+2019-11-20 21:09:38.290 [INFO ] 14776 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:09:38.717 [INFO ] 14776 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=1cee5b88-edd3-357d-bdf8-2f8c4bee4f60
+2019-11-20 21:09:38.727 [INFO ] 14776 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:09:38.821 [INFO ] 14776 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2995975c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:09:38.939 [WARN ] 14776 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:09:38.947 [INFO ] 14776 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:09:38.954 [ERROR] 14776 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:13:55.839 [INFO ] 14948 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2999c6e1: startup date [Wed Nov 20 21:13:55 CST 2019]; root of context hierarchy
+2019-11-20 21:13:55.975 [INFO ] 14948 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:13:56.000 [INFO ] 14948 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7f7a7eb4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:13:56.849 [INFO ] 14948 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:13:57.916 [INFO ] 14948 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:13:57.917 [WARN ] 14948 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:13:57.918 [INFO ] 14948 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:13:57.927 [INFO ] 14948 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71a0b5f3: startup date [Wed Nov 20 21:13:57 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2999c6e1
+2019-11-20 21:13:59.182 [INFO ] 14948 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:13:59.625 [INFO ] 14948 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=1cee5b88-edd3-357d-bdf8-2f8c4bee4f60
+2019-11-20 21:13:59.636 [INFO ] 14948 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:13:59.743 [INFO ] 14948 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$63607bb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:13:59.877 [WARN ] 14948 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:13:59.885 [INFO ] 14948 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:13:59.893 [ERROR] 14948 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:18:03.796 [INFO ] 13572 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5a00a48: startup date [Wed Nov 20 21:18:03 CST 2019]; root of context hierarchy
+2019-11-20 21:18:03.931 [INFO ] 13572 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:18:03.956 [INFO ] 13572 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b406f127] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:18:04.796 [INFO ] 13572 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:18:05.858 [INFO ] 13572 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:18:05.858 [WARN ] 13572 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:18:05.860 [INFO ] 13572 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:18:05.868 [INFO ] 13572 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@664a29a0: startup date [Wed Nov 20 21:18:05 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5a00a48
+2019-11-20 21:18:07.152 [INFO ] 13572 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:18:07.590 [INFO ] 13572 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=1cee5b88-edd3-357d-bdf8-2f8c4bee4f60
+2019-11-20 21:18:07.600 [INFO ] 13572 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:18:07.701 [INFO ] 13572 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$97ecee2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:18:07.822 [WARN ] 13572 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:18:07.830 [INFO ] 13572 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:18:07.837 [ERROR] 13572 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:21:08.893 [INFO ] 4864 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@222da480: startup date [Wed Nov 20 21:21:08 CST 2019]; root of context hierarchy
+2019-11-20 21:21:09.028 [INFO ] 4864 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:21:09.052 [INFO ] 4864 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b138e101] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:21:09.909 [INFO ] 4864 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:21:10.971 [INFO ] 4864 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:21:10.972 [WARN ] 4864 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:21:10.973 [INFO ] 4864 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:21:10.981 [INFO ] 4864 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16ec1045: startup date [Wed Nov 20 21:21:10 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@222da480
+2019-11-20 21:21:12.220 [INFO ] 4864 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:21:12.644 [INFO ] 4864 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:21:12.654 [INFO ] 4864 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:21:12.760 [INFO ] 4864 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$951ede04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:21:12.891 [WARN ] 4864 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:21:12.899 [INFO ] 4864 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:21:12.907 [ERROR] 4864 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:26:09.326 [INFO ] 11680 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@39e5c50b: startup date [Wed Nov 20 21:26:09 CST 2019]; root of context hierarchy
+2019-11-20 21:26:09.471 [INFO ] 11680 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:26:09.500 [INFO ] 11680 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b9f3090] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:26:10.357 [INFO ] 11680 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:26:11.423 [INFO ] 11680 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:26:11.423 [WARN ] 11680 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:26:11.425 [INFO ] 11680 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:26:11.433 [INFO ] 11680 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d52247d: startup date [Wed Nov 20 21:26:11 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@39e5c50b
+2019-11-20 21:26:12.687 [INFO ] 11680 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:26:13.063 [INFO ] 11680 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:26:13.073 [INFO ] 11680 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:26:13.169 [INFO ] 11680 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef852d93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:26:13.288 [WARN ] 11680 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:26:13.296 [INFO ] 11680 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:26:13.303 [ERROR] 11680 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:28:09.969 [INFO ] 13260 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3d108e45: startup date [Wed Nov 20 21:28:09 CST 2019]; root of context hierarchy
+2019-11-20 21:28:10.103 [INFO ] 13260 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:28:10.127 [INFO ] 13260 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2167aa14] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:28:10.963 [INFO ] 13260 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:28:12.027 [INFO ] 13260 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:28:12.027 [WARN ] 13260 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:28:12.029 [INFO ] 13260 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:28:12.038 [INFO ] 13260 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fdbeae9: startup date [Wed Nov 20 21:28:12 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@3d108e45
+2019-11-20 21:28:13.270 [INFO ] 13260 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:28:13.644 [INFO ] 13260 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:28:13.655 [INFO ] 13260 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:28:13.765 [INFO ] 13260 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54da717] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:28:13.922 [WARN ] 13260 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+2019-11-20 21:28:13.929 [INFO ] 13260 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:28:13.937 [ERROR] 13260 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/database/mybatis/writeOnly (wrong name: com/longer/config/database/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:30:39.657 [INFO ] 11716 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4fd4ccb4: startup date [Wed Nov 20 21:30:39 CST 2019]; root of context hierarchy
+2019-11-20 21:30:39.795 [INFO ] 11716 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:30:39.820 [INFO ] 11716 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c33b16d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:30:40.659 [INFO ] 11716 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:30:41.719 [INFO ] 11716 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:30:41.719 [WARN ] 11716 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:30:41.721 [INFO ] 11716 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:30:41.729 [INFO ] 11716 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1ebfc697: startup date [Wed Nov 20 21:30:41 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4fd4ccb4
+2019-11-20 21:30:42.943 [INFO ] 11716 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:30:43.314 [INFO ] 11716 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:30:43.324 [INFO ] 11716 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:30:43.420 [INFO ] 11716 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a72113d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:30:43.537 [WARN ] 11716 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+2019-11-20 21:30:43.545 [INFO ] 11716 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:30:43.553 [ERROR] 11716 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:32:28.955 [INFO ] 14340 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1eb5b62d: startup date [Wed Nov 20 21:32:28 CST 2019]; root of context hierarchy
+2019-11-20 21:32:29.092 [INFO ] 14340 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:32:29.117 [INFO ] 14340 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a31427d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:32:29.975 [INFO ] 14340 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:32:31.044 [INFO ] 14340 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:32:31.044 [WARN ] 14340 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:32:31.046 [INFO ] 14340 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:32:31.055 [INFO ] 14340 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@788cafc8: startup date [Wed Nov 20 21:32:31 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1eb5b62d
+2019-11-20 21:32:32.281 [INFO ] 14340 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:32:32.655 [INFO ] 14340 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:32:32.666 [INFO ] 14340 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:32:32.771 [INFO ] 14340 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86fa24d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:32:32.929 [WARN ] 14340 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+2019-11-20 21:32:32.937 [INFO ] 14340 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:32:32.944 [ERROR] 14340 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:33:41.216 [INFO ] 14760 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@69dd33a: startup date [Wed Nov 20 21:33:41 CST 2019]; root of context hierarchy
+2019-11-20 21:33:41.353 [INFO ] 14760 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:33:41.378 [INFO ] 14760 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e7746db3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:33:42.228 [INFO ] 14760 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:33:43.293 [INFO ] 14760 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:33:43.293 [WARN ] 14760 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:33:43.295 [INFO ] 14760 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:33:43.303 [INFO ] 14760 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3dd50d28: startup date [Wed Nov 20 21:33:43 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@69dd33a
+2019-11-20 21:33:44.555 [INFO ] 14760 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:33:44.935 [INFO ] 14760 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=753c946c-62dc-3d80-a8f5-1bd51b009f04
+2019-11-20 21:33:44.946 [INFO ] 14760 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:33:45.056 [INFO ] 14760 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cb5a6ab6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:33:45.188 [WARN ] 14760 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+2019-11-20 21:33:45.196 [INFO ] 14760 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:33:45.203 [ERROR] 14760 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:37:31.947 [INFO ] 15212 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7589d4b: startup date [Wed Nov 20 21:37:31 CST 2019]; root of context hierarchy
+2019-11-20 21:37:32.087 [INFO ] 15212 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:37:32.114 [INFO ] 15212 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$98c3fb07] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:37:32.970 [INFO ] 15212 [       restartedMain] c.ConfigServicePropertySourceLocator: 205 - Fetching config from server at : http://localhost:8888
+2019-11-20 21:37:34.035 [INFO ] 15212 [       restartedMain] c.ConfigServicePropertySourceLocator: 227 - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2019-11-20 21:37:34.035 [WARN ] 15212 [       restartedMain] c.ConfigServicePropertySourceLocator: 140 - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/system-manager/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2019-11-20 21:37:34.037 [INFO ] 15212 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:37:34.044 [INFO ] 15212 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7f22661b: startup date [Wed Nov 20 21:37:34 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7589d4b
+2019-11-20 21:37:35.317 [INFO ] 15212 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:37:35.698 [INFO ] 15212 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=e67fbf05-dc93-364c-88d8-59069f111bca
+2019-11-20 21:37:35.708 [INFO ] 15212 [       restartedMain] AutowiredAnnotationBeanPostProcessor: 153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-11-20 21:37:35.801 [INFO ] 15212 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ca9f80a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:37:35.919 [WARN ] 15212 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+2019-11-20 21:37:35.926 [INFO ] 15212 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:37:35.934 [ERROR] 15212 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted
+2019-11-20 21:39:14.041 [INFO ] 14524 [       restartedMain] a.AnnotationConfigApplicationContext: 590 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@13068073: startup date [Wed Nov 20 21:39:14 CST 2019]; root of context hierarchy
+2019-11-20 21:39:14.193 [INFO ] 14524 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$87f3d315] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:39:15.025 [INFO ] 14524 [       restartedMain] com.longer.SystemApplication        : 680 - No active profile set, falling back to default profiles: default
+2019-11-20 21:39:15.033 [INFO ] 14524 [       restartedMain] igServletWebServerApplicationContext: 590 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36fd8935: startup date [Wed Nov 20 21:39:15 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@13068073
+2019-11-20 21:39:16.209 [INFO ] 14524 [       restartedMain] .r.c.RepositoryConfigurationDelegate: 172 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-20 21:39:16.502 [INFO ] 14524 [       restartedMain] o.s.cloud.context.scope.GenericScope: 294 - BeanFactory id=d5476c42-e718-3f75-ba01-8b095c6f5bf1
+2019-11-20 21:39:16.596 [INFO ] 14524 [       restartedMain] ionDelegate$BeanPostProcessorChecker: 326 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6bd9d018] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 21:39:16.669 [WARN ] 14524 [       restartedMain] igServletWebServerApplicationContext: 558 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+2019-11-20 21:39:16.676 [INFO ] 14524 [       restartedMain] itionEvaluationReportLoggingListener: 101 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-20 21:39:16.683 [ERROR] 14524 [       restartedMain] o.s.boot.SpringApplication          : 863 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'meterRegistryPostProcessor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/MetricsAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:236)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:535)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at com.longer.SystemApplication.main(SystemApplication.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:254)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1060)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1033)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:484)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/longer/config/mybatis/writeOnly (wrong name: com/longer/config/mybatis/WriteOnly)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:163)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.aspectj.weaver.reflect.ReflectionBasedReferenceTypeDelegateFactory.createDelegate(ReflectionBasedReferenceTypeDelegateFactory.java:38)
+	at org.aspectj.weaver.reflect.ReflectionWorld.resolveDelegate(ReflectionWorld.java:187)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:481)
+	at org.aspectj.weaver.World.resolve(World.java:319)
+	at org.aspectj.weaver.patterns.SimpleScope.lookupType(SimpleScope.java:93)
+	at org.aspectj.weaver.BindingScope.lookupType(BindingScope.java:66)
+	at org.aspectj.weaver.patterns.ExactAnnotationTypePattern.resolveBindings(ExactAnnotationTypePattern.java:309)
+	at org.aspectj.weaver.patterns.AnnotationPointcut.resolveBindings(AnnotationPointcut.java:182)
+	at org.aspectj.weaver.patterns.Pointcut.resolve(Pointcut.java:189)
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:331)
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:225)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:126)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:95)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:76)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:352)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 41 common frames omitted

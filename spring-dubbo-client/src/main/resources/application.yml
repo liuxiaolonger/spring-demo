@@ -1,0 +1,16 @@
+server:
+  port: 8081
+dubbo:
+  consumer:
+        check: false
+  application:
+    id: dubbo-consumer
+    name: dubbo-consumer
+  protocol:
+      name: dubbo
+      port: 20880
+  registry:
+      address: zookeeper://192.168.1.10:2181
+      check: false
+  scan:
+    base-packages: com.etoc.service

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longer.dao.mapper.SystemLogMapper">
+
+	<resultMap id="BaseResultMap" type="com.longer.dao.model.SystemLog">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="user_id" jdbcType="CHAR" property="userId" />
+		<result column="user_name" jdbcType="VARCHAR" property="userName" />
+		<result column="req_ip" jdbcType="VARCHAR" property="reqIp" />
+		<result column="req_url" jdbcType="VARCHAR" property="reqUrl" />
+		<result column="log_level" jdbcType="TINYINT" property="logLevel" />
+		<result column="modual" jdbcType="VARCHAR" property="modual" />
+		<result column="log_desc" jdbcType="VARCHAR" property="logDesc" />
+		<result column="method" jdbcType="VARCHAR" property="method" />
+		<result column="log_type" jdbcType="TINYINT" property="logType" />
+		<result column="exceptions" jdbcType="VARCHAR" property="exceptions" />
+		<result column="serial" jdbcType="VARCHAR" property="serial" />
+		<result column="terminal" jdbcType="TINYINT" property="terminal" />
+		<result column="creater" jdbcType="VARCHAR" property="creater" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="updater" jdbcType="VARCHAR" property="updater" />
+		<result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+	</resultMap>
+	<resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.longer.dao.model.SystemLog">
+		<result column="params" jdbcType="LONGVARCHAR" property="params" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, user_id, user_name, req_ip, req_url, log_level, modual, log_desc, method, log_type,
+		exceptions, serial, terminal, creater, create_time, updater, update_time
+	</sql>
+	<sql id="Blob_Column_List">
+		params
+	</sql>
+
+	<select id="selectByQuery" parameterType="java.util.Map" resultMap="ResultMapWithBLOBs">
+		select
+		<include refid="Base_Column_List" />
+		,
+		<include refid="Blob_Column_List" />
+		from system_log
+		<where>
+			<if test="userId != null">
+				AND user_Id = #{userId}
+			</if>
+			<if test="userName != null">
+				AND user_name = #{userName}
+			</if>
+			<if test="modual != null">
+				AND modual = #{modual}
+			</if>
+			<if test="logLevel != null">
+				AND log_level = #{logLevel}
+			</if>
+			<if test="terminal != null">
+				AND terminal = #{terminal}
+			</if>
+			<if test="startTime != null">
+				AND create_time >= #{startTime}
+			</if>
+			<if test="endTime != null">
+				AND create_time >= #{endTime}
+			</if>
+			<if test="logType != null">
+				AND log_type >= #{logType}
+			</if>
+		</where>
+	</select>
+
+
+
+
+
+
+	<insert id="insertAll" parameterType="com.longer.dao.model.SystemLog">
+		insert into system_log (id, user_id, user_name,
+		req_ip, req_url, log_level,
+		modual, log_desc, method,
+		log_type, exceptions, serial,
+		terminal, creater, create_time,
+		updater, update_time, params
+		)
+		values (#{id,jdbcType=CHAR}, #{userId,jdbcType=CHAR}, #{userName,jdbcType=VARCHAR},
+		#{reqIp,jdbcType=VARCHAR}, #{reqUrl,jdbcType=VARCHAR}, #{logLevel,jdbcType=TINYINT},
+		#{modual,jdbcType=VARCHAR}, #{logDesc,jdbcType=VARCHAR}, #{method,jdbcType=VARCHAR},
+		#{logType,jdbcType=TINYINT}, #{exceptions,jdbcType=VARCHAR}, #{serial,jdbcType=VARCHAR},
+		#{terminal,jdbcType=TINYINT}, #{creater,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
+		#{updater,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{params,jdbcType=LONGVARCHAR}
+		)
+	</insert>
+
+	<insert id="insertSelective" parameterType="com.longer.dao.model.SystemLog">
+		insert into system_log
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="userName != null">
+				user_name,
+			</if>
+			<if test="reqIp != null">
+				req_ip,
+			</if>
+			<if test="reqUrl != null">
+				req_url,
+			</if>
+			<if test="logLevel != null">
+				log_level,
+			</if>
+			<if test="modual != null">
+				modual,
+			</if>
+			<if test="logDesc != null">
+				log_desc,
+			</if>
+			<if test="method != null">
+				method,
+			</if>
+			<if test="logType != null">
+				log_type,
+			</if>
+			<if test="exceptions != null">
+				exceptions,
+			</if>
+			<if test="serial != null">
+				serial,
+			</if>
+			<if test="terminal != null">
+				terminal,
+			</if>
+			<if test="creater != null">
+				creater,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updater != null">
+				updater,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+			<if test="params != null">
+				params,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=CHAR},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=CHAR},
+			</if>
+			<if test="userName != null">
+				#{userName,jdbcType=VARCHAR},
+			</if>
+			<if test="reqIp != null">
+				#{reqIp,jdbcType=VARCHAR},
+			</if>
+			<if test="reqUrl != null">
+				#{reqUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="logLevel != null">
+				#{logLevel,jdbcType=TINYINT},
+			</if>
+			<if test="modual != null">
+				#{modual,jdbcType=VARCHAR},
+			</if>
+			<if test="logDesc != null">
+				#{log_desc,jdbcType=VARCHAR},
+			</if>
+			<if test="method != null">
+				#{method,jdbcType=VARCHAR},
+			</if>
+			<if test="logType != null">
+				#{logType,jdbcType=TINYINT},
+			</if>
+			<if test="exceptions != null">
+				#{exceptions,jdbcType=VARCHAR},
+			</if>
+			<if test="serial != null">
+				#{serial,jdbcType=VARCHAR},
+			</if>
+			<if test="terminal != null">
+				#{terminal,jdbcType=TINYINT},
+			</if>
+			<if test="creater != null">
+				#{creater,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updater != null">
+				#{updater,jdbcType=VARCHAR},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="params != null">
+				#{params,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+</mapper>

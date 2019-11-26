@@ -1,0 +1,24 @@
+spring:
+  redis:
+        host: 192.168.1.10
+  rabbitmq:                   
+    host: 192.168.1.10
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
+    publisher-returns: true  #消息发送到交换机确认机制，是否返回回调
+    #consumer
+    listener:
+      simple:
+        prefetch: 1
+        retry:
+          #开启消费者重试
+          enabled: true
+          #重试间隔时间ms
+          initial-interval: 3000
+          #最大重试次数
+          max-attempts: 3
+        #采用手动回答
+        acknowledge-mode: manual
+  

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etoc.mapper.SysUserMapper">
+	<resultMap id="BaseResultMap" type="com.etoc.model.SysUser">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="organization_id" jdbcType="CHAR" property="organizationId" />
+		<result column="department_id" jdbcType="CHAR" property="departmentId" />
+		<result column="login_name" jdbcType="VARCHAR" property="loginName" />
+		<result column="login_psw" jdbcType="CHAR" property="loginPsw" />
+		<result column="salt" jdbcType="VARCHAR" property="salt" />
+		<result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+		<result column="user_name" jdbcType="VARCHAR" property="userName" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="user_mobile" jdbcType="VARCHAR" property="userMobile" />
+		<result column="user_mail" jdbcType="VARCHAR" property="userMail" />
+		<result column="user_wechat" jdbcType="VARCHAR" property="userWechat" />
+		<result column="user_note" jdbcType="VARCHAR" property="userNote" />
+		<result column="status" jdbcType="VARCHAR" property="status" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, organization_id, department_id, login_name, login_psw, salt, login_time, user_name,
+		create_time, user_mobile, user_mail, user_wechat, user_note, status
+	</sql>
+	<select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		where <![CDATA[ status <> 3 ]]>
+		AND id = #{id,jdbcType=CHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from sys_user
+		where id = #{id,jdbcType=CHAR}
+	</delete>
+	<insert id="insert" parameterType="com.etoc.model.SysUser">
+		insert into sys_user (id,organization_id,
+		login_name, user_name,
+		user_mobile, user_mail, user_wechat,
+		user_note,login_psw,status)
+		values ( #{id,jdbcType=CHAR},#{organizationId,jdbcType=CHAR},
+		#{loginName,jdbcType=VARCHAR},
+		#{userName,jdbcType=VARCHAR},
+		#{userMobile,jdbcType=VARCHAR}, #{userMail,jdbcType=VARCHAR}, #{userWechat,jdbcType=VARCHAR},
+		#{userNote,jdbcType=VARCHAR},#{loginPsw,jdbcType=CHAR},#{status,jdbcType=BIT} )
+	</insert>
+	<insert id="insertSelective" parameterType="com.etoc.model.SysUser">
+		insert into sys_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="organizationId != null">
+				organization_id,
+			</if>
+			<if test="departmentId != null">
+				department_id,
+			</if>
+			<if test="loginName != null">
+				login_name,
+			</if>
+			<if test="loginPsw != null">
+				login_psw,
+			</if>
+			<if test="salt != null">
+				salt,
+			</if>
+			<if test="loginTime != null">
+				login_time,
+			</if>
+			<if test="userName != null">
+				user_name,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="userMobile != null">
+				user_mobile,
+			</if>
+			<if test="userMail != null">
+				user_mail,
+			</if>
+			<if test="userWechat != null">
+				user_wechat,
+			</if>
+			<if test="userNote != null">
+				user_note,
+			</if>
+			<if test="status != null">
+				status,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=CHAR},
+			</if>
+			<if test="organizationId != null">
+				#{organizationId,jdbcType=CHAR},
+			</if>
+			<if test="departmentId != null">
+				#{departmentId,jdbcType=CHAR},
+			</if>
+			<if test="loginName != null">
+				#{loginName,jdbcType=VARCHAR},
+			</if>
+			<if test="loginPsw != null">
+				#{loginPsw,jdbcType=CHAR},
+			</if>
+			<if test="salt != null">
+				#{salt,jdbcType=VARCHAR},
+			</if>
+			<if test="loginTime != null">
+				#{loginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userName != null">
+				#{userName,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userMobile != null">
+				#{userMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="userMail != null">
+				#{userMail,jdbcType=VARCHAR},
+			</if>
+			<if test="userWechat != null">
+				#{userWechat,jdbcType=VARCHAR},
+			</if>
+			<if test="userNote != null">
+				#{userNote,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				#{status,jdbcType=BIT},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.etoc.model.SysUser">
+		update sys_user
+		<set>
+			<if test="organizationId != null">
+				organization_id = #{organizationId,jdbcType=CHAR},
+			</if>
+			<if test="departmentId != null">
+				department_id = #{departmentId,jdbcType=CHAR},
+			</if>
+			<if test="loginName != null">
+				login_name = #{loginName,jdbcType=VARCHAR},
+			</if>
+			<if test="loginPsw != null">
+				login_psw = #{loginPsw,jdbcType=CHAR},
+			</if>
+			<if test="salt != null">
+				salt = #{salt,jdbcType=VARCHAR},
+			</if>
+			<if test="loginTime != null">
+				login_time = #{loginTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userName != null">
+				user_name = #{userName,jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="userMobile != null">
+				user_mobile = #{userMobile,jdbcType=VARCHAR},
+			</if>
+			<if test="userMail != null">
+				user_mail = #{userMail,jdbcType=VARCHAR},
+			</if>
+			<if test="userWechat != null">
+				user_wechat = #{userWechat,jdbcType=VARCHAR},
+			</if>
+			<if test="userNote != null">
+				user_note = #{userNote,jdbcType=VARCHAR},
+			</if>
+			<if test="status != null">
+				status = #{status},
+			</if>
+		</set>
+		where id = #{id,jdbcType=CHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.etoc.model.SysUser">
+		<!-- WARNING - @mbg.generated This element is automatically generated by MyBatis Generator, do not modify. This element was generated on Thu May 31 14:36:30 CST 2018. -->
+		update sys_user
+		set organization_id = #{organizationId,jdbcType=CHAR},
+		department_id = #{departmentId,jdbcType=CHAR},
+		login_name = #{loginName,jdbcType=VARCHAR},
+		login_psw = #{loginPsw,jdbcType=CHAR},
+		salt = #{salt,jdbcType=VARCHAR},
+		login_time = #{loginTime,jdbcType=TIMESTAMP},
+		user_name = #{userName,jdbcType=VARCHAR},
+		create_time = #{createTime,jdbcType=TIMESTAMP},
+		user_mobile = #{userMobile,jdbcType=VARCHAR},
+		user_mail = #{userMail,jdbcType=VARCHAR},
+		user_wechat = #{userWechat,jdbcType=VARCHAR},
+		user_note = #{userNote,jdbcType=VARCHAR},
+		status = #{status,jdbcType=BIT}
+		where id = #{id,jdbcType=CHAR}
+	</update>
+
+
+	<!-- 分页 根据条件查询用户全部信息 -->
+	<select id="selectByLikeQuery" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		<where>
+			<if test="loginName != null">
+				AND login_Name like concat('%', #{loginName} ,'%')
+			</if>
+			<if test="userName != null">
+				AND user_Name like concat('%', #{userName} ,'%')
+			</if>
+			<if test="organizationId != null">
+				AND find_in_set(organization_id,#{organizationId})
+			</if>
+			<if test="status != null">
+				AND status = #{status}
+			</if>
+			<if test="status == null">
+				AND <![CDATA[ status != 'cancel' ]]>
+			</if>
+		</where>
+	</select>
+
+
+
+	<!-- 根据条件查询用户条数（包括删除用户 ） -->
+	<select id="selectByQuery" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user
+		<where>
+			<if test="loginName != null">
+				AND login_name = #{loginName}
+			</if>
+			<if test="id != null">
+				AND id = #{id}
+			</if>
+		</where>
+	</select>
+
+	<!-- 根据条件 多表关联 查询用户 -->
+	<select id="selectByQueryId" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		a.*
+		from sys_user a
+		<if test="userGroupId != null">
+			, sys_usergroup_user b
+		</if>
+		<if test="roleId != null">
+			, sys_user_role c
+		</if>
+		<where>
+			<if test="userGroupId != null">
+				AND a.id = b.user_id AND b.group_id= #{userGroupId}
+			</if>
+			<if test="roleId != null">
+				AND a.id=c.user_id AND c.role_id= #{roleId}
+			</if>
+			<if test="roleId == null and userGroupId == null">
+				 <![CDATA[AND a.status = 'available' ]]>
+			</if>
+			<if test="loginName != null">
+				AND login_name = #{loginName}
+			</if>
+		</where>
+	</select>
+</mapper>

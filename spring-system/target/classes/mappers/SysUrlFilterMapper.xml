@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longer.dao.mapper.SysUrlFilterMapper">
+
+	<resultMap id="BaseResultMap" type="com.longer.dao.model.SysUrlFilter">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="method" jdbcType="VARCHAR" property="method" />
+		<result column="url" jdbcType="VARCHAR" property="url" />
+		<result column="roles" jdbcType="VARCHAR" property="roles" />
+		<result column="permissions" jdbcType="VARCHAR" property="permissions" />
+	</resultMap>
+
+
+	<sql id="Base_Column_List">
+		id, name, method, url, roles, permissions
+	</sql>
+
+	<!--分页查询动态url权限管理 -->
+	<select id="selectSysUrl" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<!-- id, name, method, url, roles, permissions -->
+		<include refid="Base_Column_List" />
+		from sys_url_filter sys
+		<where>
+			<if test="name != null and name.trim() != '' ">
+				AND sys.`name` like concat('%',#{name},'%')
+			</if>
+		</where>
+	</select>
+
+	<!--查询所有url权限管理 -->
+	<select id="selectAllSysUrl" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_url_filter
+	</select>
+
+
+
+	<insert id="insertSysUrl" parameterType="com.longer.dao.model.SysUrlFilter">
+		insert into sys_url_filter (id, name, method, url, roles, permissions)
+		values (#{id}, #{name}, #{method} ,#{url},#{roles},#{permissions})
+	</insert>
+
+
+	<select id="selectBySysUrlId" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_url_filter sys
+		where sys.`id` = #{urlId}
+	</select>
+
+
+	<update id="updateSysUrl" parameterType="com.longer.dao.model.SysUrlFilter">
+		update sys_url_filter sys
+		<set>
+			<if test="name != null and name.trim() !='' ">
+				sys.`name` = #{name},
+			</if>
+			<if test="method != null and method.trim() !='' ">
+				sys.`method` = #{method},
+			</if>
+			<if test="url != null and url.trim() !='' ">
+				sys.`url` = #{url},
+			</if>
+			<if test="roles != null and roles.trim() !='' ">
+				sys.`roles` = #{roles},
+			</if>
+			<if test="permissions != null and permissions.trim() !='' ">
+				sys.`permissions` = #{permissions},
+			</if>
+		</set>
+		where sys.`id` = #{id}
+	</update>
+
+
+	<delete id="deleteSysUrl" parameterType="java.util.List">
+		delete from sys_url_filter where id=#{urlId}
+	</delete>
+
+
+</mapper>

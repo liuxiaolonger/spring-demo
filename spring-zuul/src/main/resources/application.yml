@@ -1,0 +1,56 @@
+server: 
+  port: 9527
+ 
+spring: 
+  application:
+    name: spring-zuul
+ 
+eureka: 
+  client: 
+    service-url: 
+        defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9003/eureka
+  instance:
+    prefer-ip-address: true 
+ 
+jwt:
+#  header: Authorization
+  token:
+    secret: mySecret
+#    7天
+#    expiration: 604800
+#    一天
+    expiration: 86400
+ 
+
+
+info:
+  app.name: spring-zuul
+  company.name: www.longer.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
+zuul: 
+#  ignored-services: microservicecloud-dept
+#  prefix: /etoc      #加前缀
+  ignored-services: "*"        #过滤所有的服务，对所有的服务起效
+  routes: 
+    mydept:
+      serviceId: system-manager
+      path:   /system-manager/**                       # /spring-api/**
+      sensitive-headers: 
+      custom-sensitive-headers: true
+#    shiro:
+#      serviceId: spring-shiro
+#      path: /spring-shiro/**
+#      sensitive-headers: 
+#      custom-sensitive-headers: true
+
+#zuul: 
+#  routes: 
+#    api: 
+#      path: /**
+#      serviceId: spring-api 
+#      sensitive-headers: 
+#      custom-sensitive-headers: true
+#  retryable: true   #开启Zuul重试的功能在原有的配置基础上需要额外进行以下设置

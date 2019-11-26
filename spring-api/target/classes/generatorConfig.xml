@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="F:/Repository/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar" />
+
+	<context id="spring-api">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/test?useSSL=true&amp;serverTimezone=UTC"
+			driverClass="com.mysql.jdbc.Driver" userId="root" password="root" />
+
+	<javaModelGenerator targetPackage="com.etoc.model"
+			targetProject="spring-api/src/main/java/" />
+
+		<sqlMapGenerator targetPackage="mappers"
+			targetProject="spring-api/src/main/resources/" />
+
+		<javaClientGenerator
+			targetPackage="com.etoc.mapper"
+			targetProject="spring-api/src/main/java/" type="XMLMAPPER" />
+
+		<table tableName="department" domainObjectName="Department"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table tableName="employee" domainObjectName="Employee"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+	</context>
+</generatorConfiguration>
+

@@ -1,0 +1,14 @@
+#该配置文件内容无法读取，只能在引用的工程加入下面的配置
+weixin: 
+  corpId: wx433314ac6eedbd31
+  agentSecret: XoRn0MQ-Qj7W7bT8DK_ij3dY-pc0O77YopNYy4NEsePT7iTP8NcqjYz7PuT8ob8X
+  agentId: 3
+  redirectUri: http://test.etoc.cn/system-service/wx/wxInfo
+  
+thread: 
+  corePoolSize: 5
+  maxPoolSize: 10
+  queueCapacity: 10000
+  keepAliveSeconds: 30
+  allowCoreThreadTimeOut: true
+  waitForJobsToCompleteOnShutdown: true

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longer.dao.mapper.AreaInfoMapper">
+	<resultMap id="BaseResultMap" type="com.longer.dao.model.AreaInfo">
+		<id column="area_id" jdbcType="CHAR" property="areaId" />
+		<result column="area_name" jdbcType="VARCHAR" property="areaName" />
+		<result column="area_type" jdbcType="TINYINT" property="areaType" />
+		<result column="countries_id" jdbcType="CHAR" property="countriesId" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		area_id , area_name , area_type , countries_id
+	</sql>
+
+	<select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from area_info
+		where area_id = #{areaId,jdbcType=CHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from
+		area_info
+		where area_id = #{areaId,jdbcType=CHAR}
+	</delete>
+	<insert id="insert" parameterType="com.longer.dao.model.AreaInfo">
+		insert into area_info (area_id, area_name, area_type,
+		countries_id)
+		values (#{areaId,jdbcType=CHAR},
+		#{areaName,jdbcType=VARCHAR},
+		#{areaType,jdbcType=BIT},
+		#{countriesId,jdbcType=CHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.longer.dao.model.AreaInfo">
+		insert into area_info
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="areaId != null">
+				area_id,
+			</if>
+			<if test="areaName != null">
+				area_name,
+			</if>
+			<if test="areaType != null">
+				area_type,
+			</if>
+			<if test="countriesId != null">
+				countries_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="areaId != null">
+				#{areaId,jdbcType=CHAR},
+			</if>
+			<if test="areaName != null">
+				#{areaName,jdbcType=VARCHAR},
+			</if>
+			<if test="areaType != null">
+				#{areaType,jdbcType=BIT},
+			</if>
+			<if test="countriesId != null">
+				#{countriesId,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.longer.dao.model.AreaInfo">
+		update area_info
+		<set>
+			<if test="areaName != null">
+				area_name = #{areaName,jdbcType=VARCHAR},
+			</if>
+			<if test="areaType != null">
+				area_type = #{areaType,jdbcType=BIT},
+			</if>
+			<if test="countriesId != null">
+				countries_id = #{countriesId,jdbcType=CHAR},
+			</if>
+		</set>
+		where area_id = #{areaId,jdbcType=CHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.longer.dao.model.AreaInfo">
+		update area_info
+		set area_name = #{areaName,jdbcType=VARCHAR},
+		area_type = #{areaType,jdbcType=BIT},
+		countries_id = #{countriesId,jdbcType=CHAR}
+		where area_id = #{areaId,jdbcType=CHAR}
+	</update>
+
+	<!-- area_id as areaId, area_name as areaName, area_type as areaType, countries_id as countriesId -->
+	<!-- 查询区域管理信息分页 -->
+	<select id="selectArea" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from area_info
+		<where>
+			<if test="areaId != null ">
+				AND area_Id like #{areaId}
+			</if>
+			<if test="areaName != null">
+				AND area_Name like concat('%',#{areaName},'%')
+			</if>
+			<if test="areaType != null">
+				<!-- AND area_Type = #{areaType} -->
+				AND <![CDATA[ area_Type <> #{areaType}  ]]>
+			</if>
+		</where>
+	</select>
+
+	<!-- 合并查询所有- 按地区类型查询 查询子地区 三个功能 -->
+	<select id="selectByAreaParms" parameterType="java.util.Map" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from area_info
+		<where>
+			<if test="areaIds != null and  areaIds.size() > 0">
+				AND area_id  in
+				<foreach item="item" collection="areaIds" open="(" separator="," close=")">
+					#{item}
+				</foreach>
+			</if>
+			<if test="areaId != null">
+				AND area_id LIKE #{areaId}
+			</if>
+			<if test="areaTypeNot != null">
+				 <![CDATA[AND  area_type != #{areaTypeNot}  ]]>
+			</if>
+			<if test="areaType != null">
+				AND area_type = #{areaType}
+			</if>
+		</where>
+	</select>
+
+</mapper>

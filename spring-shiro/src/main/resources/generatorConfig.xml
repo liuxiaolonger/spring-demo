@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="F:/Repository/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar" />
+
+	<context id="spring-shiro">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/login?useSSL=true&amp;serverTimezone=UTC"
+			driverClass="com.mysql.jdbc.Driver" userId="root" password="root" />
+
+	<javaModelGenerator targetPackage="com.etoc.model"
+			targetProject="spring-shiro/src/main/java/" />
+
+		<sqlMapGenerator targetPackage="mappers"
+			targetProject="spring-shiro/src/main/resources/" />
+
+		<javaClientGenerator
+			targetPackage="com.etoc.mapper"
+			targetProject="spring-shiro/src/main/java/" type="XMLMAPPER" />
+
+		<table tableName="login_user" domainObjectName="LoginUser"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table tableName="sys_url_filter" domainObjectName="SysUrlFilter"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table tableName="sys_role" domainObjectName="SysRole"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+<!-- 		<table tableName="employee" domainObjectName="Employee"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table> -->
+	</context>
+</generatorConfiguration>
+

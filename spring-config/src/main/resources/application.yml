@@ -1,0 +1,47 @@
+server: 
+  port: 3344 
+  
+spring:
+  application:
+    name:  spring-config
+#  rabbitmq:                     #本地环境不需要配置mq
+#    host: 192.168.1.10
+#    port: 5672
+#    username: guest
+#    password: guest
+  cloud:
+#   bus:
+#      refresh:
+#        enabled: true
+#      trace:
+#        enabled: true
+   config:
+      server:
+        git:
+          uri:  https://github.com/liuxiaolonger/config-repo.git
+          search-paths: system-manager  # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: 896846152@qq.com                                                               # git仓库的账号
+          password: 4211821992Aa+
+          force-pull: true   
+   
+management:
+  security:
+    enabled: false
+#  endpoints:
+#    web:
+#      exposure:
+#        include: bus-refresh
+      
+          
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+     defaultZone: http://localhost:9001/eureka/,http://localhost:9002/eureka/,http://localhost:9003/eureka
+  instance:
+    prefer-ip-address: true     #访问路径可以显示IP地址
+    
+
+
+                           
+         
+

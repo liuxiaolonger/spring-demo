@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etoc.mapper.SysUserResourceMapper">
+
+	<resultMap id="BaseResultMap"
+		type="com.etoc.model.SysUserResource">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="user_id" jdbcType="CHAR" property="userId" />
+		<result column="resource_id" jdbcType="CHAR" property="resourceId" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, user_id, resource_id
+	</sql>
+
+
+	<select id="selectByPrimaryKey" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from sys_user_resource
+		where id = #{id,jdbcType=CHAR}
+	</select>
+
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete
+		from
+		sys_user_resource
+		where id = #{id,jdbcType=CHAR}
+	</delete>
+	
+	<delete id="deleteSysUserResourceModel" parameterType="java.util.Map">
+		delete
+		from
+		sys_user_resource
+		<where>
+			<if test='id != null'>
+				id = #{id}
+			</if>
+			<if test='userId != null'>
+				user_id = #{userId}
+			</if>
+			<if test='resourceId != null'>
+				resource_id = #{resourceId}
+			</if>
+		</where>
+	</delete>
+
+	<insert id="insert" parameterType="com.etoc.model.SysUserResource">
+		insert into sys_user_resource
+		(id, user_id, resource_id
+		)
+		values (#{id,jdbcType=CHAR},
+		#{userId,jdbcType=CHAR}, #{resourceId,jdbcType=CHAR}
+		)
+	</insert>
+
+	<insert id="insertSelective" parameterType="com.etoc.model.SysUserResource">
+		insert into sys_user_resource
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="userId != null">
+				user_id,
+			</if>
+			<if test="resourceId != null">
+				resource_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=CHAR},
+			</if>
+			<if test="userId != null">
+				#{userId,jdbcType=CHAR},
+			</if>
+			<if test="resourceId != null">
+				#{resourceId,jdbcType=CHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateByPrimaryKeySelective" parameterType="com.etoc.model.SysUserResource">
+		update sys_user_resource
+		<set>
+			<if test="userId != null">
+				user_id = #{userId,jdbcType=CHAR},
+			</if>
+			<if test="resourceId != null">
+				resource_id = #{resourceId,jdbcType=CHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=CHAR}
+	</update>
+
+	<update id="updateByPrimaryKey" parameterType="com.etoc.model.SysUserResource">
+		update
+		sys_user_resource
+		set user_id = #{userId,jdbcType=CHAR},
+		resource_id =
+		#{resourceId,jdbcType=CHAR}
+		where id = #{id,jdbcType=CHAR}
+	</update>
+
+	<!--根据用户ID和资源条件查询关联表信息 -->
+	<select id="selectBySysResourceModel" parameterType="java.util.Map"
+		resultMap="BaseResultMap">
+		select u.* from sys_user_resource u
+		<if test='isLeaf != null'>
+			,sys_resource r
+		</if>
+		<where>
+			<if test='userId != null'>
+				and u.user_id = #{userId}
+			</if>
+			<if test='resourceId != null'>
+				and u.resource_id = #{resourceId}
+			</if>
+			<if test='isLeaf != null'>
+				and u.resource_id = r.id and r.is_leaf = #{isLeaf}
+			</if>
+		</where>
+	</select>
+
+
+</mapper>

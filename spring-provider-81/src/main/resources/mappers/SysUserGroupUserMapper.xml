@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etoc.mapper.SysUserGroupUserMapper">
+
+	<resultMap id="BaseUserAndGroup" type="com.etoc.model.SysUserGroupUser">
+		<id column="id" jdbcType="CHAR" property="id" />
+		<result column="group_id" jdbcType="CHAR" property="groupId" />
+		<result column="user_id" jdbcType="CHAR" property="userId" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, group_id, user_id
+	</sql>
+
+
+	<insert id="insertUserAndGroup" parameterType="com.etoc.model.SysUserGroupUser">
+		insert into sys_usergroup_user (id, group_id, user_id)
+		values (#{id}, #{groupId}, #{userId})
+	</insert>
+
+
+
+	<select id="serlectUserAndGroup" parameterType="java.util.Map" resultMap="BaseUserAndGroup">
+		select
+		<include refid="Base_Column_List" />
+		from sys_usergroup_user sys
+		<where>
+			<if test="groupId != null and groupId.trim() != '' ">
+				AND sys.`group_id` like concat('%',#{groupId},'%')
+			</if>
+			<if test="userId != null and userId.trim() != '' ">
+				AND sys.`user_id` like concat('%',#{userId},'%')
+			</if>
+		</where>
+	</select>
+
+
+	<select id="serlectByUserAndGroupId" parameterType="java.lang.String" resultMap="BaseUserAndGroup">
+		select
+		<include refid="Base_Column_List" />
+		from sys_usergroup_user
+		where id = #{id}
+	</select>
+
+
+	<select id="serlectByParms" parameterType="java.util.Map" resultMap="BaseUserAndGroup">
+		select
+		<include refid="Base_Column_List" />
+		from sys_usergroup_user
+		<where>
+			<if test="userId != null">
+				AND user_id = #{userId}
+			</if>
+			<if test="groupId != null">
+				AND group_id = #{groupId}
+			</if>
+		</where>
+	</select>
+
+
+	<update id="updateUserAndGroup" parameterType="com.etoc.model.SysUserGroupUser">
+		update sys_usergroup_user
+		<set>
+			<if test="groupId != null and groupId.trim() !='' ">
+				group_id = #{groupId},
+			</if>
+			<if test="userId != null and userId.trim() !='' ">
+				user_id = #{userId},
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+
+
+	<delete id="deleteByPrimaryKey" parameterType="java.util.Map">
+		delete from sys_usergroup_user
+		<where>
+			<if test="id != null ">
+				AND id = #{id}
+			</if>
+			<if test="groupId != null ">
+				AND group_id = #{groupId}
+			</if>
+			<if test="userId != null">
+				AND user_id = #{userId}
+			</if>
+		</where>
+	</delete>
+
+</mapper>
