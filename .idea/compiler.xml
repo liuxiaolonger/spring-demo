@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-config" />
+        <module name="spring-mvc" />
+        <module name="spring_eureka3" />
+        <module name="spring_eureka2" />
+        <module name="spring-hystrix" />
+        <module name="spring-common" />
+        <module name="spring-redis" />
+        <module name="spring-zuul" />
+        <module name="spring_api_customer" />
+        <module name="spring-api" />
+        <module name="spring-hystrix-dashboard" />
+        <module name="spring-elasticsearch" />
+        <module name="spring-shiro" />
+        <module name="spring-dubbo-client" />
+        <module name="spring-mongo" />
+        <module name="spring-feignclients" />
+        <module name="spring-boot" />
+        <module name="spring-system" />
+        <module name="spring-provider-82" />
+        <module name="spring-provider-81" />
+        <module name="spring-provider-80" />
+        <module name="spring-amqp" />
+        <module name="spring_eureka" />
+        <module name="spring-dubbo-server" />
+        <module name="spring-mail" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-amqp" target="1.8" />
+      <module name="spring-api" target="1.8" />
+      <module name="spring-boot" target="1.8" />
+      <module name="spring-common" target="1.8" />
+      <module name="spring-config" target="1.8" />
+      <module name="spring-dubbo-client" target="1.8" />
+      <module name="spring-dubbo-server" target="1.8" />
+      <module name="spring-elasticsearch" target="1.8" />
+      <module name="spring-feignclients" target="1.8" />
+      <module name="spring-hystrix" target="1.8" />
+      <module name="spring-hystrix-dashboard" target="1.8" />
+      <module name="spring-mail" target="1.8" />
+      <module name="spring-mannager" target="1.8" />
+      <module name="spring-mongo" target="1.8" />
+      <module name="spring-mvc" target="1.8" />
+      <module name="spring-provider-80" target="1.8" />
+      <module name="spring-provider-81" target="1.8" />
+      <module name="spring-provider-82" target="1.8" />
+      <module name="spring-redis" target="1.8" />
+      <module name="spring-shiro" target="1.8" />
+      <module name="spring-system" target="1.8" />
+      <module name="spring-zuul" target="1.8" />
+      <module name="spring_api_customer" target="1.8" />
+      <module name="spring_eureka" target="1.8" />
+      <module name="spring_eureka2" target="1.8" />
+      <module name="spring_eureka3" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-amqp" options="-parameters" />
+      <module name="spring-mvc" options="-parameters" />
+      <module name="spring-redis" options="-parameters" />
+    </option>
+  </component>
+</project>

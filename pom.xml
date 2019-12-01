@@ -115,6 +115,5 @@
 		<module>spring-system</module>
 		<module>spring-common</module>
 		<module>spring-mongo</module>
-		<module>spring-java8</module>
 	</modules>
 </project>

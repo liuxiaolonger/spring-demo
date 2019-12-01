@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="F:/Repository/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar" />
+
+	<context id="spring-api">
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3306/test1?useSSL=true&amp;serverTimezone=UTC"
+			driverClass="com.mysql.cj.jdbc.Driver" userId="root" password="root" />
+
+	<javaModelGenerator targetPackage="com.longer.springmvc.model"
+			targetProject="src/main/java/" />
+
+		<sqlMapGenerator targetPackage="mappers"
+			targetProject="src/main/resources/" />
+
+		<javaClientGenerator
+			targetPackage="com.longer.springmvc.mapper"
+			targetProject="src/main/java/" type="XMLMAPPER" />
+
+		<table tableName="department" domainObjectName="Department"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table tableName="employee" domainObjectName="Employee"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+		<table tableName="student" domainObjectName="Student"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="score" domainObjectName="Score"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="grade" domainObjectName="Grade"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+		<table tableName="team" domainObjectName="Team"
+			   enableCountByExample="false" enableUpdateByExample="false"
+			   enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+		</table>
+
+
+	</context>
+</generatorConfiguration>
+

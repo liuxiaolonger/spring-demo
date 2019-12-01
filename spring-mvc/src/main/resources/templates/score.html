@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">标题</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th >序号</th>
+        <th >分数</th>
+        <th >学号</th>
+        <th>班级号</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="s,sStat: ${list}">
+        <td th:text="${sStat.index+1}"></td>
+        <td th:text="${s.score}"></td>
+        <td th:text="${s.stuNo}"></td>
+        <td th:text="${s.classNo}"></td>
+        <td><button>修改</button><button>删除</button></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

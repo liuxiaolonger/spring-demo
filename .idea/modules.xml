@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-amqp/spring-amqp.iml" filepath="$PROJECT_DIR$/spring-amqp/spring-amqp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-api/spring-api.iml" filepath="$PROJECT_DIR$/spring-api/spring-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/spring-boot.iml" filepath="$PROJECT_DIR$/spring-boot/spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-common/spring-common.iml" filepath="$PROJECT_DIR$/spring-common/spring-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-config/spring-config.iml" filepath="$PROJECT_DIR$/spring-config/spring-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-dubbo-client/spring-dubbo-client.iml" filepath="$PROJECT_DIR$/spring-dubbo-client/spring-dubbo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-dubbo-server/spring-dubbo-server.iml" filepath="$PROJECT_DIR$/spring-dubbo-server/spring-dubbo-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-elasticsearch/spring-elasticsearch.iml" filepath="$PROJECT_DIR$/spring-elasticsearch/spring-elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-feignclients/spring-feignclients.iml" filepath="$PROJECT_DIR$/spring-feignclients/spring-feignclients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-hystrix/spring-hystrix.iml" filepath="$PROJECT_DIR$/spring-hystrix/spring-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-hystrix-dashboard/spring-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/spring-hystrix-dashboard/spring-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mail/spring-mail.iml" filepath="$PROJECT_DIR$/spring-mail/spring-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mannager.iml" filepath="$PROJECT_DIR$/spring-mannager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mongo/spring-mongo.iml" filepath="$PROJECT_DIR$/spring-mongo/spring-mongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc/spring-mvc.iml" filepath="$PROJECT_DIR$/spring-mvc/spring-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-provider-80/spring-provider-80.iml" filepath="$PROJECT_DIR$/spring-provider-80/spring-provider-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-provider-81/spring-provider-81.iml" filepath="$PROJECT_DIR$/spring-provider-81/spring-provider-81.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-provider-82/spring-provider-82.iml" filepath="$PROJECT_DIR$/spring-provider-82/spring-provider-82.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-redis/spring-redis.iml" filepath="$PROJECT_DIR$/spring-redis/spring-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-shiro/spring-shiro.iml" filepath="$PROJECT_DIR$/spring-shiro/spring-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-system/spring-system.iml" filepath="$PROJECT_DIR$/spring-system/spring-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-zuul/spring-zuul.iml" filepath="$PROJECT_DIR$/spring-zuul/spring-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_api_customer/spring_api_customer.iml" filepath="$PROJECT_DIR$/spring_api_customer/spring_api_customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_eureka/spring_eureka.iml" filepath="$PROJECT_DIR$/spring_eureka/spring_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_eureka2/spring_eureka2.iml" filepath="$PROJECT_DIR$/spring_eureka2/spring_eureka2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_eureka3/spring_eureka3.iml" filepath="$PROJECT_DIR$/spring_eureka3/spring_eureka3.iml" />
+    </modules>
+  </component>
+</project>

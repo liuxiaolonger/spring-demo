@@ -1,0 +1,26 @@
+server:
+  port: 8005
+
+mybatis:
+  mapper-locations: classpath*:mappers/*Mapper.xml
+  type-aliases-package: com.etoc.model
+
+spring:
+  application:
+    name: spring-mvc
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+info:
+  app.name: spring-mvc
+  company.name: www.longerr.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
